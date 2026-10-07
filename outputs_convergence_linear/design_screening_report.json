@@ -1,0 +1,159 @@
+{
+  "status": "success",
+  "summary": "Screened new candidates with the linear-output 4000-sample MLP and recalculated each objective's top 10 with TMM",
+  "next_actions": [
+    "Review the objective direction before using either top-five list"
+  ],
+  "artifacts": [
+    "outputs_convergence_linear\\design_screening_predictions.npz",
+    "outputs_convergence_linear\\design_top10_tmm_spectra.npz",
+    "outputs_convergence_linear\\design_top10_min.csv",
+    "outputs_convergence_linear\\design_top10_max.csv",
+    "outputs_convergence_linear\\design_top5_min.csv",
+    "outputs_convergence_linear\\design_top5_max.csv"
+  ],
+  "python_version": "3.14.7",
+  "numpy_version": "2.5.3",
+  "torch_version": "2.14.0+cpu",
+  "device": "cpu",
+  "model_output_activation": "linear",
+  "candidate_count": 10000,
+  "exact_candidate_matches_in_training_dataset": 0,
+  "design_seed": 270257,
+  "target_wavelength_nm": 700,
+  "candidate_thickness_range_nm": [
+    40.000528345392595,
+    179.99713725691754
+  ],
+  "prediction_range_at_target": [
+    -0.02629406936466694,
+    0.6682479381561279
+  ],
+  "predictions_outside_physical_reflectance_bounds": 41,
+  "objectives": {
+    "min": {
+      "objective": "minimize target reflectance",
+      "mlp_top10_csv": "outputs_convergence_linear\\design_top10_min.csv",
+      "tmm_verified_top5_csv": "outputs_convergence_linear\\design_top5_min.csv",
+      "top5": [
+        {
+          "mlp_rank": 3,
+          "tmm_rank_within_mlp_top10": 1,
+          "candidate_index": 7207,
+          "d1_nm": 162.4617181431749,
+          "d2_nm": 44.84497778633623,
+          "d3_nm": 134.53432696311467,
+          "d4_nm": 57.814460505754724,
+          "mlp_reflectance_at_target": -0.018718296661973,
+          "tmm_reflectance_at_target": 0.00191279738006693
+        },
+        {
+          "mlp_rank": 7,
+          "tmm_rank_within_mlp_top10": 2,
+          "candidate_index": 2898,
+          "d1_nm": 161.25695819225012,
+          "d2_nm": 55.877357209401595,
+          "d3_nm": 126.86692481401549,
+          "d4_nm": 66.6583504354135,
+          "mlp_reflectance_at_target": -0.01274109072983265,
+          "tmm_reflectance_at_target": 0.002115300502841489
+        },
+        {
+          "mlp_rank": 9,
+          "tmm_rank_within_mlp_top10": 3,
+          "candidate_index": 531,
+          "d1_nm": 159.39859005490717,
+          "d2_nm": 62.63696735586327,
+          "d3_nm": 128.35963060260514,
+          "d4_nm": 53.329789177132945,
+          "mlp_reflectance_at_target": -0.010098684579133987,
+          "tmm_reflectance_at_target": 0.002220622020616697
+        },
+        {
+          "mlp_rank": 4,
+          "tmm_rank_within_mlp_top10": 4,
+          "candidate_index": 3612,
+          "d1_nm": 163.75580480490942,
+          "d2_nm": 47.066338069861345,
+          "d3_nm": 129.52946140549102,
+          "d4_nm": 105.0066642152072,
+          "mlp_reflectance_at_target": -0.017359035089612007,
+          "tmm_reflectance_at_target": 0.003080942739546729
+        },
+        {
+          "mlp_rank": 5,
+          "tmm_rank_within_mlp_top10": 5,
+          "candidate_index": 5085,
+          "d1_nm": 164.01984717355526,
+          "d2_nm": 40.446917656011905,
+          "d3_nm": 122.18823229237296,
+          "d4_nm": 108.4834070797207,
+          "mlp_reflectance_at_target": -0.013855218887329102,
+          "tmm_reflectance_at_target": 0.00332688044061612
+        }
+      ]
+    },
+    "max": {
+      "objective": "maximize target reflectance",
+      "mlp_top10_csv": "outputs_convergence_linear\\design_top10_max.csv",
+      "tmm_verified_top5_csv": "outputs_convergence_linear\\design_top5_max.csv",
+      "top5": [
+        {
+          "mlp_rank": 5,
+          "tmm_rank_within_mlp_top10": 1,
+          "candidate_index": 2256,
+          "d1_nm": 72.43722425518963,
+          "d2_nm": 129.57468295432722,
+          "d3_nm": 75.515407549006,
+          "d4_nm": 117.71697341242977,
+          "mlp_reflectance_at_target": 0.6652528047561646,
+          "tmm_reflectance_at_target": 0.6569997365529806
+        },
+        {
+          "mlp_rank": 2,
+          "tmm_rank_within_mlp_top10": 2,
+          "candidate_index": 4011,
+          "d1_nm": 71.47693341416866,
+          "d2_nm": 120.67571275087356,
+          "d3_nm": 81.02933023537082,
+          "d4_nm": 115.24279340807774,
+          "mlp_reflectance_at_target": 0.6682140231132507,
+          "tmm_reflectance_at_target": 0.656283542163063
+        },
+        {
+          "mlp_rank": 7,
+          "tmm_rank_within_mlp_top10": 3,
+          "candidate_index": 7220,
+          "d1_nm": 73.01570321196715,
+          "d2_nm": 113.78090703519182,
+          "d3_nm": 77.99770983368592,
+          "d4_nm": 138.7769041892442,
+          "mlp_reflectance_at_target": 0.6648254990577698,
+          "tmm_reflectance_at_target": 0.6544672774412356
+        },
+        {
+          "mlp_rank": 4,
+          "tmm_rank_within_mlp_top10": 4,
+          "candidate_index": 39,
+          "d1_nm": 69.37646751250088,
+          "d2_nm": 133.3526242059425,
+          "d3_nm": 73.81132473566183,
+          "d4_nm": 109.48650541784384,
+          "mlp_reflectance_at_target": 0.6653476357460022,
+          "tmm_reflectance_at_target": 0.6543221626397142
+        },
+        {
+          "mlp_rank": 6,
+          "tmm_rank_within_mlp_top10": 5,
+          "candidate_index": 5660,
+          "d1_nm": 79.62679467136982,
+          "d2_nm": 116.33339755541914,
+          "d3_nm": 73.32678141515913,
+          "d4_nm": 151.04628744352408,
+          "mlp_reflectance_at_target": 0.6650446057319641,
+          "tmm_reflectance_at_target": 0.6543079646805805
+        }
+      ]
+    }
+  }
+}

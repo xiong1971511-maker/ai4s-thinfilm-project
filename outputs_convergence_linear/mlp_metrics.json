@@ -1,0 +1,95 @@
+{
+  "status": "success",
+  "summary": "Trained four MLPs using fixed train/validation/test splits",
+  "next_actions": [
+    "Review metrics and loss histories before design screening"
+  ],
+  "artifacts": [
+    "outputs_convergence_linear\\mlp_metrics.json",
+    "models_convergence_linear"
+  ],
+  "python_version": "3.14.7",
+  "numpy_version": "2.5.3",
+  "torch_version": "2.14.0+cpu",
+  "device": "cpu",
+  "seed": 270256,
+  "design_seed": 270257,
+  "target_wavelength_nm": 700,
+  "split_sizes": {
+    "train_pool": 4000,
+    "validation": 500,
+    "test": 500
+  },
+  "model": {
+    "layer_sizes": [
+      4,
+      128,
+      128,
+      64,
+      41
+    ],
+    "activation": "ReLU",
+    "output_activation": "linear",
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "loss": "mean squared error",
+    "batch_size": 128,
+    "max_epochs": 2500,
+    "early_stopping_patience": 100,
+    "input_scaling": "linear map of 40-180 nm to 0-1"
+  },
+  "results_by_training_size": {
+    "500": {
+      "training_size": 500,
+      "best_epoch": 2490,
+      "epochs_run": 2500,
+      "validation_mse": 0.000848777883220464,
+      "test_mse": 0.000748074846342206,
+      "test_rmse": 0.027350956954779588,
+      "test_mae": 0.018663987517356873,
+      "test_r2": 0.9771822863625557,
+      "elapsed_seconds": 13.313526400001138,
+      "checkpoint": "models_convergence_linear\\mlp_train_500.pt",
+      "loss_history": "outputs_convergence_linear\\loss_history_train_500.csv"
+    },
+    "1000": {
+      "training_size": 1000,
+      "best_epoch": 2036,
+      "epochs_run": 2136,
+      "validation_mse": 0.0003993711725343019,
+      "test_mse": 0.0003689070581458509,
+      "test_rmse": 0.019206953380113436,
+      "test_mae": 0.01346963457763195,
+      "test_r2": 0.9887476286452098,
+      "elapsed_seconds": 19.0899408999976,
+      "checkpoint": "models_convergence_linear\\mlp_train_1000.pt",
+      "loss_history": "outputs_convergence_linear\\loss_history_train_1000.csv"
+    },
+    "2000": {
+      "training_size": 2000,
+      "best_epoch": 2477,
+      "epochs_run": 2500,
+      "validation_mse": 0.0001856598973972723,
+      "test_mse": 0.00016235439397860318,
+      "test_rmse": 0.012741836366026806,
+      "test_mae": 0.009123015217483044,
+      "test_r2": 0.9950478802014002,
+      "elapsed_seconds": 45.456431300000986,
+      "checkpoint": "models_convergence_linear\\mlp_train_2000.pt",
+      "loss_history": "outputs_convergence_linear\\loss_history_train_2000.csv"
+    },
+    "4000": {
+      "training_size": 4000,
+      "best_epoch": 1538,
+      "epochs_run": 1638,
+      "validation_mse": 0.00016520881035830826,
+      "test_mse": 0.00012939069711137563,
+      "test_rmse": 0.011375003169730355,
+      "test_mae": 0.008290624246001244,
+      "test_r2": 0.996053336306814,
+      "elapsed_seconds": 62.42648599999666,
+      "checkpoint": "models_convergence_linear\\mlp_train_4000.pt",
+      "loss_history": "outputs_convergence_linear\\loss_history_train_4000.csv"
+    }
+  }
+}

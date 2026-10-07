@@ -1,0 +1,153 @@
+{
+  "status": "success",
+  "model_output_activation": "linear",
+  "model_training_size": 4000,
+  "checkpoint": "models_convergence_linear\\mlp_train_4000.pt",
+  "metrics": "outputs_convergence_linear\\mlp_metrics.json",
+  "candidate_source": "outputs_convergence_linear\\design_screening_predictions.npz",
+  "candidate_count": 10000,
+  "design_seed": 270257,
+  "target_wavelength_nm": 700,
+  "saved_prediction_matches_checkpoint_inference": true,
+  "max_abs_prediction_difference": 2.384185791015625e-07,
+  "full_tmm_evaluation_count": 10000,
+  "minimum": {
+    "candidate_index": 3405,
+    "tmm_reflectance_at_target": 0.00020416604168566513
+  },
+  "maximum": {
+    "candidate_index": 2256,
+    "tmm_reflectance_at_target": 0.6569997365529806
+  },
+  "comparison_with_linear_mlp_top10": {
+    "min_overlap_count_with_global_top5": 0,
+    "min_overlap_candidate_ids": [],
+    "max_overlap_count_with_global_top5": 3,
+    "max_overlap_candidate_ids": [
+      2256,
+      4011,
+      7220
+    ]
+  },
+  "artifacts": {
+    "full_candidate_npz": "linear_candidate_full_tmm.npz",
+    "all_candidate_ranked_csv": "linear_candidate_tmm_ranked.csv",
+    "global_top5_min_csv": "linear_global_top5_min.csv",
+    "global_top5_max_csv": "linear_global_top5_max.csv",
+    "updated_figure3": "figure_3_linear_global_tmm.svg"
+  },
+  "global_tmm_top5_min": [
+    {
+      "candidate_index": 3405,
+      "d1_nm": 127.38556793888199,
+      "d2_nm": 158.31666879074294,
+      "d3_nm": 114.16276313100143,
+      "d4_nm": 100.47338563311716,
+      "mlp_reflectance_at_target": -0.007760971784591675,
+      "tmm_reflectance_at_target": 0.00020416604168566513,
+      "tmm_rank_overall": 1,
+      "tmm_rank_opposite_objective": 10000
+    },
+    {
+      "candidate_index": 121,
+      "d1_nm": 141.68471998011324,
+      "d2_nm": 120.07625175043998,
+      "d3_nm": 127.87384530718501,
+      "d4_nm": 59.03016724227493,
+      "mlp_reflectance_at_target": 0.0016393307596445084,
+      "tmm_reflectance_at_target": 0.0002268130065609862,
+      "tmm_rank_overall": 2,
+      "tmm_rank_opposite_objective": 9999
+    },
+    {
+      "candidate_index": 8933,
+      "d1_nm": 137.8108655544687,
+      "d2_nm": 125.56060151081755,
+      "d3_nm": 123.58768957855122,
+      "d4_nm": 142.34544532559363,
+      "mlp_reflectance_at_target": 0.0026195840910077095,
+      "tmm_reflectance_at_target": 0.0002345668078511858,
+      "tmm_rank_overall": 3,
+      "tmm_rank_opposite_objective": 9998
+    },
+    {
+      "candidate_index": 3537,
+      "d1_nm": 156.83240869196794,
+      "d2_nm": 57.97212814962681,
+      "d3_nm": 135.2643332545632,
+      "d4_nm": 51.66295491202026,
+      "mlp_reflectance_at_target": -0.003475131466984749,
+      "tmm_reflectance_at_target": 0.0003182752984763324,
+      "tmm_rank_overall": 4,
+      "tmm_rank_opposite_objective": 9997
+    },
+    {
+      "candidate_index": 5416,
+      "d1_nm": 134.0849719127292,
+      "d2_nm": 138.6790713936269,
+      "d3_nm": 123.75600620275124,
+      "d4_nm": 96.1870652152823,
+      "mlp_reflectance_at_target": -0.0014150552451610565,
+      "tmm_reflectance_at_target": 0.00037059163039613474,
+      "tmm_rank_overall": 5,
+      "tmm_rank_opposite_objective": 9996
+    }
+  ],
+  "global_tmm_top5_max": [
+    {
+      "candidate_index": 2256,
+      "d1_nm": 72.43722425518963,
+      "d2_nm": 129.57468295432722,
+      "d3_nm": 75.515407549006,
+      "d4_nm": 117.71697341242977,
+      "mlp_reflectance_at_target": 0.6652528047561646,
+      "tmm_reflectance_at_target": 0.6569997365529806,
+      "tmm_rank_overall": 1,
+      "tmm_rank_opposite_objective": 10000
+    },
+    {
+      "candidate_index": 8996,
+      "d1_nm": 79.4826429907726,
+      "d2_nm": 121.2466745311914,
+      "d3_nm": 78.65531577649607,
+      "d4_nm": 124.00350583816503,
+      "mlp_reflectance_at_target": 0.655399739742279,
+      "tmm_reflectance_at_target": 0.6565436368623766,
+      "tmm_rank_overall": 2,
+      "tmm_rank_opposite_objective": 9999
+    },
+    {
+      "candidate_index": 4011,
+      "d1_nm": 71.47693341416866,
+      "d2_nm": 120.67571275087356,
+      "d3_nm": 81.02933023537082,
+      "d4_nm": 115.24279340807774,
+      "mlp_reflectance_at_target": 0.6682140231132507,
+      "tmm_reflectance_at_target": 0.656283542163063,
+      "tmm_rank_overall": 3,
+      "tmm_rank_opposite_objective": 9998
+    },
+    {
+      "candidate_index": 6318,
+      "d1_nm": 74.58683659855873,
+      "d2_nm": 128.26410106601293,
+      "d3_nm": 78.6866513593557,
+      "d4_nm": 120.73671615092422,
+      "mlp_reflectance_at_target": 0.6609376072883606,
+      "tmm_reflectance_at_target": 0.6558522793388705,
+      "tmm_rank_overall": 4,
+      "tmm_rank_opposite_objective": 9997
+    },
+    {
+      "candidate_index": 7220,
+      "d1_nm": 73.01570321196715,
+      "d2_nm": 113.78090703519182,
+      "d3_nm": 77.99770983368592,
+      "d4_nm": 138.7769041892442,
+      "mlp_reflectance_at_target": 0.6648254990577698,
+      "tmm_reflectance_at_target": 0.6544672774412356,
+      "tmm_rank_overall": 5,
+      "tmm_rank_opposite_objective": 9996
+    }
+  ]
+}
