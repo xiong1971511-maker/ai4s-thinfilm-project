@@ -9,6 +9,8 @@
   "seed": 270256,
   "design_seed": 270257,
   "target_wavelength_nm": 700,
+  "language": "zh-en",
+  "font": "assets/fonts/AI4SFigureCJK-Regular.otf",
   "sources": [
     "data/thinfilm_dataset.npz",
     "models_convergence_linear/mlp_train_4000.pt",

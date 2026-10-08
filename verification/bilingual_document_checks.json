@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "pages": 6,
+  "language": "Chinese prose with Chinese-English headings, keywords, figure/table captions, chart labels and availability statement",
+  "bilingual_heading_count": 18,
+  "bilingual_caption_count": 4,
+  "public_identity_removed": true,
+  "numerical_reverification_checks": 21,
+  "figure_font": "assets/fonts/AI4SFigureCJK-Regular.otf",
+  "svg_labels": "portable vector paths"
+}

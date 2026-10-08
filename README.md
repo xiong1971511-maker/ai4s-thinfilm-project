@@ -14,7 +14,7 @@
 
 ## 提交材料
 
-1. Research Article：[Word](paper/AI4S_ThinFilm_Research_Article_Submission.docx) + [PDF](paper/AI4S_ThinFilm_Research_Article_Submission.pdf)，公开版 6 页，省略姓名与完整学号；课程提交版保留模板要求的身份信息。
+1. Research Article：[Word](paper/AI4S_ThinFilm_Research_Article_Submission.docx) + [PDF](paper/AI4S_ThinFilm_Research_Article_Submission.pdf)，公开版 6 页；中文正文，标题、关键词、图注、表头及图内说明中英双语，省略姓名与完整学号；课程提交版保留模板要求的身份信息。
 2. GitHub 仓库链接：https://github.com/xiong1971511-maker/ai4s-thinfilm-project
 3. [作业要求逐项对应与最终验收记录](docs/FINAL_SUBMISSION_CHECKLIST.md)。课程平台的额外提交要求以平台通知为准。
 
@@ -50,7 +50,7 @@ python scripts/verify_submission.py
 python scripts/make_submission_figures.py
 ```
 
-`verify_submission.py` 从 seed 重建全部 5000 组数据及固定划分，加载已发布主模型独立计算验证/测试误差，重算全部 10000 个候选的 41 点 TMM 光谱，并核对短名单、全池极值、训练历史和失败案例。检查结果写入 `verification/submission_verification.json`。`make_submission_figures.py` 重建论文三个组合图，输出 PNG、SVG 和数据来源清单至 `paper/figures/`。
+`verify_submission.py` 从 seed 重建全部 5000 组数据及固定划分，加载已发布主模型独立计算验证/测试误差，重算全部 10000 个候选的 41 点 TMM 光谱，并核对短名单、全池极值、训练历史和失败案例。检查结果写入 `verification/submission_verification.json`。`make_submission_figures.py` 重建论文三个组合图，输出双语 PNG、SVG 和数据来源清单至 `paper/figures/`。脚本直接加载仓库附带的 OFL 授权中文字体子集 `assets/fonts/`；SVG 文字保存为矢量路径，无需额外安装字体。
 
 主要结果：测试 RMSE **0.0113750**；500/1000/2000/4000 样本测试 RMSE 依次为 0.027351/0.019207/0.012742/0.011375。全池最低 R(700 nm)=0.00020416604（ID 3405），最高=0.65699974（ID 2256）。Table 1 的排名限于各 MLP Top-10 短名单，不能作为全池排名。
 
