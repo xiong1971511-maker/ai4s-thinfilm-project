@@ -1,0 +1,7 @@
+split=test
+x_shape=(500, 4)
+y_shape=(500, 41)
+prediction_shape=(500, 41)
+mse=0.00012939
+mae=0.00829062
+rmse=0.01137500

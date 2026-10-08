@@ -36,8 +36,8 @@ def _write_history(path: Path, history: list[dict[str, float]]) -> None:
 
 
 def _nested_training_subsets(train_pool: np.ndarray, sizes: tuple[int, ...], seed: int) -> dict[int, np.ndarray]:
-    order = np.random.default_rng(seed).permutation(len(train_pool))
-    return {size: train_pool[order[:size]] for size in sizes}
+    # The assignment prescribes prefixes of the existing fixed training pool.
+    return {size: train_pool[:size] for size in sizes}
 
 
 def main() -> None:

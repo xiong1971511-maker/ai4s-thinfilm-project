@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "torch": "2.14.0+cpu"
+  },
+  "checks": {
+    "dataset_regenerates_from_seed": true,
+    "fixed_disjoint_splits_match": true,
+    "checkpoint_test_metrics_match": true,
+    "checkpoint_validation_metric_matches": true,
+    "history_500_epochs_and_best_metric": true,
+    "history_1000_epochs_and_best_metric": true,
+    "history_2000_epochs_and_best_metric": true,
+    "history_4000_epochs_and_best_metric": true,
+    "candidate_seed_and_pool_match": true,
+    "candidates_do_not_duplicate_dataset": true,
+    "candidate_predictions_match_checkpoint": true,
+    "all_10000_candidate_spectra_match_tmm": true,
+    "saved_full_pool_thicknesses_match": true,
+    "global_extrema_match_paper": true,
+    "min_shortlist_ids_match": true,
+    "min_shortlist_values_match": true,
+    "max_shortlist_ids_match": true,
+    "max_shortlist_values_match": true,
+    "shortlist_overlap_matches_paper": true,
+    "highest_error_case_matches_paper": true,
+    "failure_case_csv_matches_checkpoint": true
+  },
+  "test_mse": 0.0001293906825594604,
+  "test_rmse": 0.01137500253008589,
+  "test_mae": 0.008290623314678669,
+  "validation_mse": 0.00016520881035830826,
+  "dataset_tmm_max_abs_error": 8.881784197001252e-16,
+  "candidate_tmm_max_abs_error": 7.771561172376096e-16,
+  "candidate_inference_max_abs_error": 3.5762786865234375e-07,
+  "failure_case_prediction_max_abs_error": 2.0861588123644026e-07,
+  "global_minimum": {
+    "id": 3405,
+    "reflectance": 0.0002041660416856622
+  },
+  "global_maximum": {
+    "id": 2256,
+    "reflectance": 0.6569997365529808
+  },
+  "shortlist_overlaps": {
+    "min": 0,
+    "max": 3
+  }
+}

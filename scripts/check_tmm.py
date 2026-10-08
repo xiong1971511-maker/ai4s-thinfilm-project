@@ -75,7 +75,7 @@ def main() -> None:
             else "One or more TMM physical checks failed"
         ),
         "next_actions": (
-            ["Wait for user confirmation before dataset generation or MLP training"]
+            ["Run scripts/verify_submission.py to verify the published article artifacts"]
             if passed
             else ["Inspect the failed check before continuing"]
         ),

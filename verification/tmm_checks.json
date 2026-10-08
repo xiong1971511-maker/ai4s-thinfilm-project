@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "summary": "TMM physical checks passed",
+  "next_actions": [
+    "Run scripts/verify_submission.py to verify the published article artifacts"
+  ],
+  "artifacts": [
+    "src/ai4s_thinfilm/tmm.py",
+    "tests/test_tmm.py"
+  ],
+  "python_version": "3.12.14",
+  "parameters": {
+    "target_wavelength_nm": 700,
+    "seed": 270256,
+    "design_seed": 270257,
+    "layer_indices": [
+      2.3,
+      1.45,
+      2.3,
+      1.45
+    ],
+    "quarter_wave_thicknesses_nm": [
+      76.08695652173914,
+      120.6896551724138,
+      76.08695652173914,
+      120.6896551724138
+    ]
+  },
+  "spectrum": {
+    "point_count": 41,
+    "first_wavelength_nm": 400,
+    "last_wavelength_nm": 800,
+    "minimum_reflectance": 0.03085956659279823,
+    "maximum_reflectance": 0.6588868299017766,
+    "target_reflectance": 0.6588868299017766
+  },
+  "physics_checks": {
+    "bare_air_glass_reflectance": 0.042579994960947345,
+    "max_energy_conservation_error": 4.440892098500626e-16,
+    "checks": {
+      "wavelength_count_is_41": true,
+      "wavelength_endpoints_are_400_and_800_nm": true,
+      "reflectance_is_finite_and_bounded": true,
+      "bare_interface_matches_fresnel": true,
+      "lossless_energy_error_below_1e-12": true
+    }
+  }
+}

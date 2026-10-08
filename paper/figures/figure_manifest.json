@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "model": "published Linear checkpoint",
+  "figures": [
+    "figure_1_workflow_and_tmm",
+    "figure_2_prediction_and_design",
+    "figure_3_training_and_failure"
+  ],
+  "seed": 270256,
+  "design_seed": 270257,
+  "target_wavelength_nm": 700,
+  "sources": [
+    "data/thinfilm_dataset.npz",
+    "models_convergence_linear/mlp_train_4000.pt",
+    "outputs_convergence_linear/mlp_metrics.json",
+    "outputs_convergence_linear/loss_history_train_4000.csv",
+    "outputs_convergence_linear/global_tmm_audit/linear_candidate_full_tmm.npz",
+    "outputs_convergence_linear/design_top10_min.csv",
+    "outputs_convergence_linear/design_top10_max.csv"
+  ]
+}

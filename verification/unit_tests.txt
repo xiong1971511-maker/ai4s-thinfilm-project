@@ -1,0 +1,22 @@
+test_assignment_split_is_fixed_disjoint_and_covers_all_rows (test_dataset.DatasetTests.test_assignment_split_is_fixed_disjoint_and_covers_all_rows) ... ok
+test_dataset_archive_round_trips_splits_and_metadata (test_dataset.DatasetTests.test_dataset_archive_round_trips_splits_and_metadata) ... ok
+test_generation_is_reproducible_and_has_expected_shapes (test_dataset.DatasetTests.test_generation_is_reproducible_and_has_expected_shapes) ... ok
+test_candidate_ranking_supports_both_reflectance_objectives (test_design.DesignScreeningTests.test_candidate_ranking_supports_both_reflectance_objectives) ... ok
+test_design_candidates_are_seeded_and_within_thickness_bounds (test_design.DesignScreeningTests.test_design_candidates_are_seeded_and_within_thickness_bounds) ... ok
+test_tmm_verification_returns_one_bounded_value_per_wavelength (test_design.DesignScreeningTests.test_tmm_verification_returns_one_bounded_value_per_wavelength) ... ok
+test_model_can_select_linear_output_for_fair_architecture_comparison (test_model.MLPTests.test_model_can_select_linear_output_for_fair_architecture_comparison) ... ok
+test_model_has_assignment_architecture_and_returns_41_outputs (test_model.MLPTests.test_model_has_assignment_architecture_and_returns_41_outputs) ... ok
+test_model_predictions_remain_inside_physical_reflectance_bounds (test_model.MLPTests.test_model_predictions_remain_inside_physical_reflectance_bounds) ... ok
+test_training_returns_finite_validation_and_test_metrics (test_model.MLPTests.test_training_returns_finite_validation_and_test_metrics) ... ok
+test_student_parameters_and_wavelength_grid (test_tmm.StudyConfigTests.test_student_parameters_and_wavelength_grid) ... ok
+test_bare_air_glass_interface_matches_fresnel_formula (test_tmm.TMMPhysicsTests.test_bare_air_glass_interface_matches_fresnel_formula) ... ok
+test_lossless_stack_conserves_energy (test_tmm.TMMPhysicsTests.test_lossless_stack_conserves_energy) ... ok
+test_mismatched_layer_inputs_are_rejected (test_tmm.TMMPhysicsTests.test_mismatched_layer_inputs_are_rejected) ... ok
+test_spectrum_has_one_finite_bounded_value_per_wavelength (test_tmm.TMMPhysicsTests.test_spectrum_has_one_finite_bounded_value_per_wavelength) ... ok
+test_two_quarter_wave_pairs_raise_target_reflectance (test_tmm.TMMPhysicsTests.test_two_quarter_wave_pairs_raise_target_reflectance) ... ok
+test_zero_thickness_layers_reduce_to_bare_interface (test_tmm.TMMPhysicsTests.test_zero_thickness_layers_reduce_to_bare_interface) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.848s
+
+OK

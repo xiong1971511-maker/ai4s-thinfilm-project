@@ -17,27 +17,25 @@ def load_split(dataset_path: str, split_name: str) -> tuple[np.ndarray, np.ndarr
         spectra = archive["reflectance"]
         indices = archive[f"{split_name}_indices"]
 
-    x = thicknesses_nm[indices].astype(np.float32)
+    x = thicknesses_nm[indices]
     y = spectra[indices].astype(np.float32)
     x_min = float(STUDY_CONFIG.thickness_min_nm)
     x_max = float(STUDY_CONFIG.thickness_max_nm)
     x_scaled = (x - x_min) / (x_max - x_min)
-    return x_scaled, y
+    return x_scaled.astype(np.float32), y
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset", default="data/thinfilm_dataset.npz")
     parser.add_argument("--split", choices=("train", "validation", "test"), default="test")
-    parser.add_argument("--checkpoint", default="")
+    parser.add_argument("--checkpoint", default="models_convergence_linear/mlp_train_4000.pt")
     args = parser.parse_args()
 
     x, y = load_split(args.dataset, args.split)
-    model = MLPRegressor(output_activation="sigmoid")
-
-    if args.checkpoint:
-        checkpoint = torch.load(args.checkpoint, map_location="cpu")
-        model.load_state_dict(checkpoint["model_state_dict"])
+    checkpoint = torch.load(args.checkpoint, map_location="cpu", weights_only=True)
+    model = MLPRegressor(output_activation=checkpoint.get("output_activation", "linear"))
+    model.load_state_dict(checkpoint["model_state_dict"])
 
     model.eval()
     with torch.no_grad():
